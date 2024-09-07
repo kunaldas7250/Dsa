@@ -1,0 +1,18 @@
+import java.io.*;
+class fileWritter{
+public static void main(String args[]){
+try{
+	FileWriter f=new FileWriter("D:\\test.txt");
+	try{
+		f.write("hello kunal");
+	}
+finally{
+	f.close();
+}
+System.out.println("file sussfully");
+catch(IOException i){
+	System.out.println(i);
+}
+}
+}
+}

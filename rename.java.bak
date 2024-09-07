@@ -1,0 +1,22 @@
+//rename file
+import java.io.*;
+
+class renameFile{
+ public static void main(String args[]){
+ try{
+ File f=new File("D:\\test.txt");
+ File r=new File("D:\\file.txt");
+ try{
+ if(f.exists()){
+ System.out.println(f.renameTo(r));
+ }
+ }
+ } // missing catch block here
+ finally{
+ f.close(); // error on this line
+ }
+ }catch(IOException i){
+ System.out.println("Error writing to file: " + i.getMessage());
+ }
+ }
+}
